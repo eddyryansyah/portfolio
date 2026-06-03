@@ -24,27 +24,32 @@ This project is a static personal portfolio website built using HTML, CSS, and J
 - Project portfolio section
 - Contact information
 - Netlify deployment status badge
-- Automatic deployment through Netlify
+- Production deployment through GitHub Actions and Netlify CLI
 
 ## Tech Stack
 
 - HTML
 - CSS
 - JavaScript
+- GitHub Actions
 - Netlify
 
 ## Deployment
 
-This project is deployed using Netlify and connected directly to the GitHub repository.
+This project is deployed to Netlify using GitHub Actions and Netlify CLI.
 
-Every update pushed to the `main` branch can trigger a new production deployment automatically through Netlify.
+Every update pushed to the `main` branch triggers a GitHub Actions workflow. The workflow deploys the latest version of the website to Netlify production and records the deployment under the `production` environment in GitHub.
+
+The Netlify status badge at the top of this README reflects the current state of the latest production deployment.
 
 ## Project Structure
 
 ```text
 .
 ├── .github/
-│   └── FUNDING.yml
+│   ├── FUNDING.yml
+│   └── workflows/
+│       └── deploy-netlify.yml
 ├── assets/
 │   ├── arrow.png
 │   ├── checkmark.png
@@ -58,6 +63,7 @@ Every update pushed to the `main` branch can trigger a new production deployment
 │   ├── project-1.png
 │   ├── project-2.png
 │   └── project-3.png
+├── .gitignore
 ├── LICENSE
 ├── README.md
 ├── index.html
