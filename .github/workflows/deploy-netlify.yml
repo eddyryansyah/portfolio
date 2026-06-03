@@ -4,34 +4,57 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
   deployments: write
 
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
 jobs:
   deploy:
     name: Deploy production site
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     environment:
       name: production
       url: https://eddyryansyah.netlify.app
 
+    env:
+      NODE_VERSION: 24
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: ${{ env.NODE_VERSION }}
+          package-manager-cache: false
+
+      - name: Verify Node.js and npm versions
+        run: |
+          node --version
+          npm --version
 
       - name: Install Netlify CLI
-        run: npm install -g netlify-cli
+        run: npm install -g netlify-cli@latest
+
+      - name: Verify Netlify CLI version
+        run: netlify --version
 
       - name: Deploy to Netlify production
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        run: netlify deploy --prod --dir=. --site="$NETLIFY_SITE_ID" --auth="$NETLIFY_AUTH_TOKEN"
+        run: |
+          netlify deploy \
+            --prod \
+            --dir=. \
+            --site="$NETLIFY_SITE_ID" \
+            --message="GitHub Actions production deploy: $GITHUB_SHA"
