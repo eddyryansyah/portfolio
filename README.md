@@ -58,6 +58,7 @@ The Netlify status badge at the top of this README reflects the current state of
 │   ├── eddy-resume.pdf
 │   ├── education.png
 │   ├── email.png
+│   ├── favicon.png
 │   ├── github.png
 │   ├── linkedin.png
 │   ├── project-1.png
