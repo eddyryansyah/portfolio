@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Eddy Ryansyah | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
@@ -13,6 +13,7 @@
       <div class="logo">Eddy Ryansyah</div>
       <div>
         <ul class="nav-links">
+          <li><a href="#profile">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -20,6 +21,7 @@
         </ul>
       </div>
     </nav>
+
     <nav id="hamburger-nav">
       <div class="logo">Eddy Ryansyah</div>
       <div class="hamburger-menu">
@@ -29,6 +31,7 @@
           <span></span>
         </div>
         <div class="menu-links">
+          <li><a href="#profile" onclick="toggleMenu()">Home</a></li>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
@@ -36,268 +39,371 @@
         </div>
       </div>
     </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/eddy-profile.png" alt="Eddy-pic" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Eddy Ryansyah</h1>
-        <p class="section__text__p2">Frontend Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/eddy-resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
+
+    <main>
+      <section id="profile">
+        <div class="section__pic-container profile-photo-wrapper">
           <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/eddyryansyah/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/eddyryansyah/'"
+            src="./assets/eddy-profile.png"
+            alt="Eddy Ryansyah profile picture"
+            class="profile-photo"
           />
         </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/eddy-about.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+
+        <div class="section__text hero-content">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Eddy Ryansyah</h1>
+          <p class="section__text__p2">QA Engineer & Web Developer</p>
+          <p class="hero-description">
+            Informatics undergraduate student with a strong interest in software
+            quality, web development, testing, and building reliable digital
+            products.
+          </p>
+
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('./assets/eddy-resume.pdf')"
+            >
+              Download CV
+            </button>
+            <button
+              class="btn btn-color-1"
+              onclick="location.href = './#contact'"
+            >
+              Contact Me
+            </button>
+          </div>
+
+          <div id="socials-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn profile"
+              class="icon social-icon"
+              onclick="
+                location.href = 'https://www.linkedin.com/in/eddyryansyah/'
+              "
+            />
+            <img
+              src="./assets/github.png"
+              alt="GitHub profile"
+              class="icon social-icon"
+              onclick="location.href = 'https://github.com/eddyryansyah/'"
+            />
+          </div>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>S1 Informatics - Faculty of Computer Science<br />University of Singaperbangsa Karawang</p>
+      </section>
+
+      <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+
+        <div class="section-container">
+          <div class="section__pic-container about-photo-wrapper">
+            <img
+              src="./assets/eddy-about.png"
+              alt="Eddy Ryansyah about profile"
+              class="about-pic"
+            />
+          </div>
+
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="Education icon"
+                  class="icon"
+                />
+                <h3>Education</h3>
+                <p>
+                  S1 Informatics<br />
+                  Faculty of Computer Science<br />
+                  Universitas Singaperbangsa Karawang
+                </p>
+              </div>
+
+              <div class="details-container">
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Focus icon"
+                  class="icon"
+                />
+                <h3>Focus</h3>
+                <p>
+                  Software Testing<br />
+                  Web Development<br />
+                  Quality Assurance
+                </p>
+              </div>
+            </div>
+
+            <div class="text-container">
+              <p>
+                I have a technical background in computer networking and a
+                growing focus on software quality assurance. I enjoy learning
+                how applications are built, tested, documented, and improved so
+                they can provide a better user experience and more reliable
+                results.
+              </p>
             </div>
           </div>
-          <div class="text-container">
+        </div>
+      </section>
+
+      <section id="skills">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+
+        <div class="skills-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="skills-sub-title">Quality Assurance</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Manual Testing</h3>
+                    <p>Fundamental</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Test Case Design</h3>
+                    <p>Fundamental</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Bug Reporting</h3>
+                    <p>Fundamental</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Documentation</h3>
+                    <p>Good</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="details-container">
+              <h2 class="skills-sub-title">Web Development</h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>HTML</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CSS</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Skill icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Bootstrap</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+
+        <div class="skills-details-container">
+          <div class="about-containers projects-grid">
+            <div class="details-container color-container">
+              <div class="article-container project-image-container">
+                <img
+                  src="./assets/project-1.png"
+                  alt="Java based application project"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="skills-sub-title project-title">
+                Aplikasi Berbasis Java
+              </h2>
+              <p class="project-description">
+                Desktop application project built as a learning implementation
+                of programming logic and application development.
+              </p>
+              <div class="project-tags">
+                <span>Java</span>
+                <span>Desktop App</span>
+              </div>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href = 'https://youtu.be/exXY5-gFS-w/'"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+
+            <div class="details-container color-container">
+              <div class="article-container project-image-container">
+                <img
+                  src="./assets/project-2.png"
+                  alt="Online book sales project"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="skills-sub-title project-title">
+                Penjualan Buku Online
+              </h2>
+              <p class="project-description">
+                Web-based project concept for displaying and managing online
+                book sales information.
+              </p>
+              <div class="project-tags">
+                <span>Web</span>
+                <span>E-Commerce</span>
+              </div>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href = 'https://youtu.be/0MewloH_Od0/'"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+
+            <div class="details-container color-container">
+              <div class="article-container project-image-container">
+                <img
+                  src="./assets/project-3.png"
+                  alt="Free fall motion device project"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="skills-sub-title project-title">
+                Perangkat Gerak Jatuh Bebas
+              </h2>
+              <p class="project-description">
+                Educational project related to physics learning and free fall
+                motion observation.
+              </p>
+              <div class="project-tags">
+                <span>Education</span>
+                <span>Prototype</span>
+              </div>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href = 'https://youtu.be/_2jNeHGLbmA/'"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
             <p>
-            I am a highly motivated fifth-semester student pursuing a Bachelor's degree in Informatics. Coming from a background in Computer Networking from a vocational high school, I have developed a strong foundation in technical skills and a passion for the field of information technology.
+              <a href="mailto:2110631170011@student.unsika.ac.id">
+                2110631170011@student.unsika.ac.id
+              </a>
+            </p>
+          </div>
+
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p>
+              <a href="https://www.linkedin.com/in/eddyryansyah/"> LinkedIn </a>
+            </p>
+          </div>
+
+          <div class="contact-info-container">
+            <img
+              src="./assets/github.png"
+              alt="GitHub icon"
+              class="icon contact-icon"
+            />
+            <p>
+              <a href="https://github.com/eddyryansyah/"> GitHub </a>
             </p>
           </div>
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#skills'"
-      />
-    </section>
-    <section id="skills">
-      <p class="section__text__p1">My Available</p>
-      <h1 class="title">Skills</h1>
-      <div class="skills-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="skills-sub-title">Hard Skill</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
-                <div>
-                  <h3>HTML</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
-                <div>
-                  <h3>CSS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Skills icon" class="icon">
-                <div>
-                  <h3>Bootstrap</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="skills-sub-title">Soft Skill</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Communication</h3>
-                  <p>Good</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Teamwork</h3>
-                  <p>Excellent</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Leadership</h3>
-                  <p>Good</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Confidence</h3>
-                  <p>Excellent</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="skills-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="skills-sub-title project-title">Aplikasi Berbasis Java</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/exXY5-gFS-w/'"
-              >
-                View
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="skills-sub-title project-title">Penjualan Buku Online</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/0MewloH_Od0/'"
-              >
-                View
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="skills-sub-title project-title">Perangkat Gerak Jatuh Bebas</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://youtu.be/_2jNeHGLbmA/'"
-              >
-                View
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:2110631170011@student.unsika.ac.id">2110631170011@student.unsika.ac.id</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/eddyryansyah/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
+
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
+            <li><a href="#profile">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -305,8 +411,9 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2025 Eddy Ryansyah. All Rights Reserved.</p>
+      <p>Copyright &#169; 2026 Eddy Ryansyah. All Rights Reserved.</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

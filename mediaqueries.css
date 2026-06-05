@@ -1,103 +1,145 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
   }
+
   #hamburger-nav {
     display: flex;
+    padding: 0 5%;
   }
-  #skills,
-  .skills-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
+
   section {
-    margin: 0 5%;
+    padding: 5rem 5%;
   }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+
+  #profile {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
   }
+
+  .section__text {
+    text-align: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-container,
+  #socials-container {
+    justify-content: center;
+  }
+
+  .section-container {
+    flex-direction: column;
+  }
+
   .about-containers {
-    margin-top: 0;
+    flex-wrap: wrap;
   }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+@media screen and (max-width: 768px) {
+  #hamburger-nav {
+    height: 5rem;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+
+  .logo {
+    font-size: 1.25rem;
   }
-  article {
-    font-size: 1rem;
+
+  .profile-photo-wrapper {
+    width: min(78vw, 340px);
+    height: min(95vw, 420px);
   }
-  footer nav {
-    height: fit-content;
+
+  .profile-photo-wrapper::before {
+    inset: 1.25rem -0.8rem -0.8rem 1.25rem;
+  }
+
+  .title {
+    font-size: 2.75rem;
+  }
+
+  #about > .title,
+  #skills > .title,
+  #projects > .title,
+  #contact > .title {
+    font-size: 2.35rem;
     margin-bottom: 2rem;
   }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
+
+  .section__text__p2 {
+    font-size: 1.35rem;
   }
-  .contact-info-container {
-    margin: 0;
+
+  .about-photo-wrapper {
+    width: min(82vw, 340px);
+    height: min(90vw, 380px);
   }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .skills-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
+
+  .about-containers {
     flex-direction: column;
-    gap: 0.5rem;
+  }
+
+  .article-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-info-container {
+    justify-content: flex-start;
+  }
+
+  footer .nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
     text-align: center;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    padding: 4rem 1.25rem;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
+
   .title {
-    font-size: 2rem;
+    font-size: 2.35rem;
   }
-  .text-container {
-    text-align: justify;
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-container {
+    width: 100%;
+  }
+
+  .details-container {
+    padding: 1.5rem;
+  }
+
+  .project-img {
+    height: 180px;
+  }
+
+  .contact-info-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info-container p {
+    font-size: 0.9rem;
+    word-break: break-word;
   }
 }
