@@ -51,19 +51,20 @@ The Netlify status badge at the top of this README reflects the current state of
 │   └── workflows/
 │       └── deploy-netlify.yml
 ├── assets/
-│   ├── arrow.png
+│   ├── apple-touch-icon.png
 │   ├── checkmark.png
-│   ├── eddy-about.png
-│   ├── eddy-profile.png
+│   ├── eddy-about.webp
+│   ├── eddy-profile.webp
 │   ├── eddy-resume.pdf
 │   ├── education.png
 │   ├── email.png
+│   ├── favicon-32x32.png
 │   ├── favicon.png
 │   ├── github.png
 │   ├── linkedin.png
-│   ├── project-1.png
-│   ├── project-2.png
-│   └── project-3.png
+│   ├── project-1.webp
+│   ├── project-2.webp
+│   └── project-3.webp
 ├── .gitignore
 ├── LICENSE
 ├── README.md

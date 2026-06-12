@@ -4,8 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Eddy Ryansyah | Portfolio</title>
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="shortcut icon" href="./assets/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+
+    <link rel="preload" as="image" href="./assets/eddy-profile.webp" />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
@@ -45,9 +57,13 @@
       <section id="profile">
         <div class="section__pic-container profile-photo-wrapper">
           <img
-            src="./assets/eddy-profile.png"
+            src="./assets/eddy-profile.webp"
             alt="Eddy Ryansyah profile picture"
             class="profile-photo"
+            width="840"
+            height="1040"
+            fetchpriority="high"
+            decoding="async"
           />
         </div>
 
@@ -82,14 +98,14 @@
               alt="LinkedIn profile"
               class="icon social-icon"
               onclick="
-                location.href = 'https://www.linkedin.com/in/eddyryansyah/'
+                location.href = 'https://www.linkedin.com/in/eddyryansyah'
               "
             />
             <img
               src="./assets/github.png"
               alt="GitHub profile"
               class="icon social-icon"
-              onclick="location.href = 'https://github.com/eddyryansyah/'"
+              onclick="location.href = 'https://github.com/eddyryansyah'"
             />
           </div>
         </div>
@@ -102,9 +118,13 @@
         <div class="section-container">
           <div class="section__pic-container about-photo-wrapper">
             <img
-              src="./assets/eddy-about.png"
+              src="./assets/eddy-about.webp"
               alt="Eddy Ryansyah about profile"
               class="about-pic"
+              width="760"
+              height="840"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -270,9 +290,13 @@
             <div class="details-container color-container">
               <div class="article-container project-image-container">
                 <img
-                  src="./assets/project-1.png"
+                  src="./assets/project-1.webp"
                   alt="Java based application project"
                   class="project-img"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h2 class="skills-sub-title project-title">
@@ -289,7 +313,7 @@
               <div class="btn-container">
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="location.href = 'https://youtu.be/exXY5-gFS-w/'"
+                  onclick="location.href = 'https://youtu.be/exXY5-gFS-w'"
                 >
                   View Project
                 </button>
@@ -299,9 +323,13 @@
             <div class="details-container color-container">
               <div class="article-container project-image-container">
                 <img
-                  src="./assets/project-2.png"
+                  src="./assets/project-2.webp"
                   alt="Online book sales project"
                   class="project-img"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h2 class="skills-sub-title project-title">
@@ -318,7 +346,7 @@
               <div class="btn-container">
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="location.href = 'https://youtu.be/0MewloH_Od0/'"
+                  onclick="location.href = 'https://youtu.be/0MewloH_Od0'"
                 >
                   View Project
                 </button>
@@ -328,9 +356,13 @@
             <div class="details-container color-container">
               <div class="article-container project-image-container">
                 <img
-                  src="./assets/project-3.png"
+                  src="./assets/project-3.webp"
                   alt="Free fall motion device project"
                   class="project-img"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h2 class="skills-sub-title project-title">
@@ -347,7 +379,7 @@
               <div class="btn-container">
                 <button
                   class="btn btn-color-2 project-btn"
-                  onclick="location.href = 'https://youtu.be/_2jNeHGLbmA/'"
+                  onclick="location.href = 'https://youtu.be/_2jNeHGLbmA'"
                 >
                   View Project
                 </button>
@@ -362,40 +394,48 @@
         <h1 class="title">Contact Me</h1>
 
         <div class="contact-info-upper-container">
-          <div class="contact-info-container">
+          <a
+            class="contact-info-container"
+            href="mailto:2110631170011@student.unsika.ac.id"
+            aria-label="Send email to Eddy Ryansyah"
+          >
             <img
               src="./assets/email.png"
               alt="Email icon"
               class="icon contact-icon email-icon"
             />
-            <p>
-              <a href="mailto:2110631170011@student.unsika.ac.id">
-                2110631170011@student.unsika.ac.id
-              </a>
-            </p>
-          </div>
+            <span>2110631170011@student.unsika.ac.id</span>
+          </a>
 
-          <div class="contact-info-container">
+          <a
+            class="contact-info-container"
+            href="https://www.linkedin.com/in/eddyryansyah"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Eddy Ryansyah LinkedIn profile"
+          >
             <img
               src="./assets/linkedin.png"
               alt="LinkedIn icon"
               class="icon contact-icon"
             />
-            <p>
-              <a href="https://www.linkedin.com/in/eddyryansyah/"> LinkedIn </a>
-            </p>
-          </div>
+            <span>LinkedIn</span>
+          </a>
 
-          <div class="contact-info-container">
+          <a
+            class="contact-info-container"
+            href="https://github.com/eddyryansyah"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Eddy Ryansyah GitHub profile"
+          >
             <img
               src="./assets/github.png"
               alt="GitHub icon"
               class="icon contact-icon"
             />
-            <p>
-              <a href="https://github.com/eddyryansyah/"> GitHub </a>
-            </p>
-          </div>
+            <span>GitHub</span>
+          </a>
         </div>
       </section>
     </main>
