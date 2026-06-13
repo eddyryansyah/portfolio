@@ -62,6 +62,7 @@ The Netlify status badge at the top of this README reflects the current state of
 │   ├── favicon.png
 │   ├── github.png
 │   ├── linkedin.png
+│   ├── og-image.png
 │   ├── project-1.webp
 │   ├── project-2.webp
 │   └── project-3.webp
